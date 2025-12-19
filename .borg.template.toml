@@ -4,6 +4,7 @@ files = [
     ".gitignore",
     "CODE_OF_CONDUCT.md",
     "SECURITY.md",
-    ".github/workflows/deploy.yml",
+    ".github/workflows/pr_reminder.yml",
+    ".github/workflows/cleanup.yml",
     "Makefile",
 ]
