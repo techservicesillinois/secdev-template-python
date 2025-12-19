@@ -1,0 +1,9 @@
+[template]
+files = [
+    ".gitattributes",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+    ".github/workflows/deploy.yml",
+    "Makefile",
+]
