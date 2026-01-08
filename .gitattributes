@@ -1,10 +1,14 @@
 # Ignore files managed by soar_template in Github PR reviews
 .gitattributes linguist-generated
-.github/workflows/deploy.yml linguist-generated
+.github/workflows/pr_reminder.yml linguist-generated
+.github/workflows/cleanup.yml linguist-generated
 .gitignore linguist-generated
 CODE_OF_CONDUCT.md linguist-generated
-Makefile linguist-generated
 SECURITY.md linguist-generated
+
+# Python
+.github/workflows/deploy.yml linguist-generated
+Makefile linguist-generated
 mypy.ini linguist-generated
 pyproject.toml linguist-generated
 soar_template linguist-generated
