@@ -1,3 +1,6 @@
 [source]
 url = 'https://raw.githubusercontent.com/techservicesillinois/secdev-template-repository/refs/heads/feature/sync/'  # From #22
+# Additional configuration will be loaded from `<url>/.borg.template.toml`
+
+# TODO: Update to this after #22 merges.
 # url = 'https://github.com/techservicesillinois/secdev-template-python/blob/main/'
