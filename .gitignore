@@ -1,67 +1,45 @@
-# vim swap files
-*.swp
-
 # aspell files
 *.bak
+
+# Editors
+*.idea
+*.swp
+.vscode
+
+# Environments
+.env
+
+# macOS
+.DS_Store
+
+# Makefile targets
+.build
+.deps-test
+.develop
+.lint
+.requirements.venv
+.static
+.venv/
+build/
+dist/
+venv
+wheels
 
 # Python
 __pycache__/
 .mypy_cache/
 .pytest_cache
 .python-version
+*.egg-info
+*.eggs
 
 # Python Coverage.py
 .coverage
 report.html
 
-# macOS
-.DS_Store
-
-# Common
-.bash_*
-.build
-.env
-.gnupg/*
-.histfile
-.lesshst
-.mysql*
-.profile
-.ssh/*
-.subversion/*
-.vim*
-.vim/*
-.vscode
-.zcompdump
-.zsh*
-*.idea
-*.ini
-conf
-investigations/*
-
 # Robot Framework
 log.html
 output.xml
-
-# Makefile targets
-.build
-.deps-test
-.develop
-.env
-.lint
-.requirements.venv
-.static
-.venv/
-*.egg-info
-*.eggs
-build/
-dist/
-requirements-test.in
-requirements.in
-venv
-wheels
-
-# Testing logs
-*simulated
 
 # Setuptools generated files
 _version.py
