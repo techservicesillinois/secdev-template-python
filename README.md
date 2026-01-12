@@ -1,7 +1,7 @@
 ## About
 
 This repository is used by Cybersecurity operations teams at the 
-University of Illinois as a GitHub template.
+University of Illinois as a GitHub template *for Python projects*.
 
 This resource helps comply with University of Illinois
 Cybersecurity standards - including [IT-07][it07], [IT08][it08],
