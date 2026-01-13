@@ -7,6 +7,7 @@
 files = [
     # All SecOps Repos
     ".gitattributes",
+    ".gitignore",
     ".github/workflows/pr_reminder.yml",
     ".github/workflows/cleanup.yml",
     "CODE_OF_CONDUCT.md",
