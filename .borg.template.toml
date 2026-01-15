@@ -4,12 +4,21 @@
 # If this file is present in a child repository, it should be deleted.
 
 [template]
+# Keep these files in sync across Python repos
 files = [
-    # All SecOps Repos
-    ".gitattributes",
     ".gitignore",
     ".github/workflows/pr_reminder.yml",
     ".github/workflows/cleanup.yml",
     "CODE_OF_CONDUCT.md",
     "SECURITY.md",
 ]
+
+[generate.gitattributes]
+files = [
+    # All machine generated files
+    ".gitattributes",
+    "requiements*.txt",
+]
+# Include all template files above
+include_template_files = true
+
