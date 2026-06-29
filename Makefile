@@ -1,21 +1,27 @@
-VENV_PYTHON:=venv/bin/python
+VENV_PYTHON:=.venv/bin/python
 SRCS:=$(shell find src tests -name '*.py')
 
 all: test
 
-venv: requirements-test.in requirements.in
+# `make python-version` is used by GitHub actions to echo 
+# the expected version of Python into .python-version
+PYTHON_VERSION:=$(shell PYTHONPATH=tests python3 -c 'from test_python_version import EXPECT_PYTHON_VERSION as V; print(f"{V[0]}.{V[1]}")')
+python-version:
+	@echo $(PYTHON_VERSION)
+
+.venv: requirements-test.in requirements.in
 	rm -rf $@
-	python -m venv venv
+	python -m venv .venv
 	$(VENV_PYTHON) -m pip install -r $^
 # Install dependencies from pyproject.toml
 	$(VENV_PYTHON) -m pip install -e .
 
-lint: venv .lint
+lint: .venv .lint
 .lint: $(SRCS) $(TSCS)
 	$(VENV_PYTHON) -m flake8 $?
 	touch $@
 
-static: venv .static
+static: .venv .static
 .static: $(SRCS) $(TSCS)
 	echo "Code: $(SRCS)"
 	echo "Test: $(TSCS)"
@@ -25,7 +31,7 @@ static: venv .static
 autopep8:
 	autopep8 --in-place $(SRCS)
 
-unit: venv
+unit: .venv
 	$(VENV_PYTHON) -m pytest
 
 test: lint static unit
@@ -36,4 +42,4 @@ clean:
 	-find src -type d -name __pycache__ -exec rm -fr "{}" \;
 
 force-clean: clean
-	rm -rf venv
+	rm -rf .venv
